@@ -2,18 +2,167 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Github Page demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="index.js"></script>
+    <title>map created with amCharts | amCharts</title>
+    <meta name="description" content="map created using amCharts pixel map generator" />
+
+    <!--
+			This map was created using Pixel Map Generator by amCharts and is licensed under the Creative Commons Attribution 4.0 International License.
+			You may use this map the way you see fit as long as proper attribution to the name of amCharts is given in the form of link to https://pixelmap.amcharts.com/
+			To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+
+			If you would like to use this map without any attribution, you can acquire a commercial license for the JavaScript Maps - a tool that was used to produce this map.
+			To do so, visit amCharts Online Store: https://www.amcharts.com/online-store/
+		-->
+
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/chinaLow.js"></script>
+
+    <!-- amCharts javascript code -->
+    <script type="text/javascript">
+        AmCharts.makeChart("map", {
+            "type": "map",
+            "pathToImages": "http://www.amcharts.com/lib/3/images/",
+            "addClassNames": true,
+            "fontSize": 15,
+            "color": "#000000",
+            "projection": "mercator",
+            "backgroundAlpha": 1,
+            "backgroundColor": "rgba(247,254,255,1)",
+            "dataProvider": {
+                "map": "chinaLow",
+                "getAreasFromMap": true,
+                "images": [
+                    {
+                        "top": 40,
+                        "left": 60,
+                        "width": 80,
+                        "height": 40,
+                        "pixelMapperLogo": true,
+                        "imageURL": "http://pixelmap.amcharts.com/static/img/logo-black.svg",
+                        "url": "http://www.amcharts.com"
+                    }
+                ],
+                "areas": [
+                    {
+                        "id": "CN-34",
+                        "title": "Anhui",
+                        "color": "rgba(103,160,229,1)"
+                    },
+                    {
+                        "id": "CN-11",
+                        "title": "Beijing",
+                        "color": "rgba(17,68,130,1)"
+                    },
+                    {
+                        "id": "CN-35",
+                        "title": "Fujian",
+                        "color": "rgba(38,112,201,1)"
+                    },
+                    {
+                        "id": "CN-52",
+                        "title": "Guizhou",
+                        "color": "rgba(185,215,252,1)"
+                    },
+                    {
+                        "id": "CN-43",
+                        "title": "Hunan",
+                        "color": "rgba(38,112,201,1)"
+                    },
+                    {
+                        "id": "CN-22",
+                        "title": "Jilin",
+                        "color": "rgba(185,215,252,1)"
+                    },
+                    {
+                        "id": "CN-32",
+                        "title": "Jiangsu",
+                        "color": "rgba(17,68,130,1)"
+                    },
+                    {
+                        "id": "CN-64",
+                        "title": "Ningxia Hui",
+                        "color": "rgba(185,215,252,1)"
+                    },
+                    {
+                        "id": "CN-61",
+                        "title": "Shaanxi",
+                        "color": "rgba(38,112,201,1)"
+                    },
+                    {
+                        "id": "CN-37",
+                        "title": "Shandong",
+                        "color": "rgba(17,68,130,1)"
+                    },
+                    {
+                        "id": "CN-31",
+                        "title": "Shanghai",
+                        "color": "rgba(17,68,130,1)"
+                    },
+                    {
+                        "id": "CN-12",
+                        "title": "Tianjin",
+                        "color": "rgba(38,112,201,1)"
+                    },
+                    {
+                        "id": "CN-54",
+                        "title": "Xizang (Tibet)",
+                        "color": "rgba(185,215,252,1)"
+                    }
+                ]
+            },
+            "balloon": {
+                "horizontalPadding": 15,
+                "borderAlpha": 0,
+                "borderThickness": 1,
+                "verticalPadding": 15
+            },
+            "areasSettings": {
+                "color": "rgba(103,160,229,1)",
+                "outlineColor": "rgba(247,254,255,1)",
+                "rollOverOutlineColor": "rgba(247,254,255,1)",
+                "rollOverBrightness": 20,
+                "selectedBrightness": 20,
+                "selectable": true,
+                "unlistedAreasAlpha": 0,
+                "unlistedAreasOutlineAlpha": 0
+            },
+            "imagesSettings": {
+                "alpha": 1,
+                "color": "rgba(103,160,229,1)",
+                "outlineAlpha": 0,
+                "rollOverOutlineAlpha": 0,
+                "outlineColor": "rgba(247,254,255,1)",
+                "rollOverBrightness": 20,
+                "selectedBrightness": 20,
+                "selectable": true
+            },
+            "linesSettings": {
+                "color": "rgba(103,160,229,1)",
+                "selectable": true,
+                "rollOverBrightness": 20,
+                "selectedBrightness": 20
+            },
+            "zoomControl": {
+                "zoomControlEnabled": true,
+                "homeButtonEnabled": false,
+                "panControlEnabled": false,
+                "right": 38,
+                "bottom": 30,
+                "minZoomLevel": 0.25,
+                "gridHeight": 100,
+                "gridAlpha": 0.1,
+                "gridBackgroundAlpha": 0,
+                "gridColor": "#FFFFFF",
+                "draggerAlpha": 1,
+                "buttonCornerRadius": 2
+            }
+        });
+    </script>
 </head>
 
-<body>
-    <div id="main-content">
-
-    </div>
+<body style="margin: 0;background-color: rgba(247,254,255,1);">
+    <div id="map" style="width: 100%; height: 1006px;"></div>
 </body>
 
 </html>
